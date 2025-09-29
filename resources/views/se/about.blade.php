@@ -13,7 +13,7 @@
     <p>ภาควิชาวิศวกรรมซอฟต์แวร์ มหาวิทยาลัยราชภัฏนครปฐม ก่อตั้งขึ้นเพื่อตอบสนองความต้องการของวิศวกรซอฟต์แวร์ที่มีคุณภาพในประเทศไทยและทั่วโลก หลักสูตรของเราเน้นทั้งพื้นฐานทางทฤษฎีและการประยุกต์ใช้หลักการด้านวิศวกรรมซอฟต์แวร์</p>
     
     <div style="text-align: center; margin: 30px 0;">
-        <img src="{{ asset('images/se-npru-logo.svg') }}" alt="ภาควิชาวิศวกรรมซอฟต์แวร์" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px;" onerror="this.src='https://via.placeholder.com/300x300?text=No+Image+Available'">
+        <img src="{{ asset('images/se-npru-logo.jpg') }}" alt="ภาควิชาวิศวกรรมซอฟต์แวร์" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px;" onerror="this.src='https://via.placeholder.com/300x300?text=No+Image+Available'">
     </div>
     
     <h3>พันธกิจ</h3>
@@ -86,7 +86,7 @@
         <div class="card">
             <div class="card-content">
                 <h3>ความรับผิดชอบทางจริยธรรม</h3>
-                <p>บัณฑิตจะเข้าใจและปฏิบัติตามความรับผิดชอบทางวิชาชีพและจริยธรรมในการพัฒนาซอฟต์แวร์</p>
+                <p>บัณฑิตจะเข้าใจและปฏิบักติตามความรับผิดชอบทางวิชาชีพและจริยธรรมในการพัฒนาซอฟต์แวร์</p>
             </div>
         </div>
     </div>
