@@ -17,6 +17,7 @@ return new class extends Migration
             $table->text('content')->nullable();
             $table->string('section'); // overview, mission, vision, general_info, careers, objectives, outcomes, history
             $table->string('image')->nullable();
+            $table->text('list_items')->nullable(); // JSON encoded list items
             $table->integer('sort_order')->default(0);
             $table->timestamps();
         });

@@ -15,33 +15,37 @@
         <p>{{ $content->content }}</p>
         
         <div style="text-align: center; margin: 30px 0;">
-            <img src="{{ asset($content->image) }}" alt="ภาควิชาวิศวกรรมซอฟต์แวร์" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px;" onerror="this.src='https://via.placeholder.com/300x300?text=No+Image+Available'">
+            <img src="{{ asset($content->image) }}" alt="ภาควิชาวิศวกรรมซอฟต์แวร์" style="width: 100%; max-width: 600px; height: 300px; object-fit: cover; border-radius: 8px;" onerror="this.src='https://via.placeholder.com/300x300?text=No+Image+Available'">
         </div>
-        
-        @elseif($content->section == 'mission')
+    </section>
+    
+    @elseif($content->section == 'mission')
+    <section>
         <h3>{{ $content->title }}</h3>
         <p>{{ $content->content }}</p>
-        
-        @elseif($content->section == 'vision')
+    </section>
+    
+    @elseif($content->section == 'vision')
+    <section>
         <h3>{{ $content->title }}</h3>
         <p>{{ $content->content }}</p>
-        
-        @elseif($content->section == 'general_info')
-        </section>
-        
-        <section>
+    </section>
+    
+    @elseif($content->section == 'general_info')
+    <section>
         <h2>{{ $content->title }}</h2>
+        @if($content->list_items)
         <ul style="list-style-type: disc; padding-left: 20px; margin: 20px 0;">
             @foreach(json_decode($content->list_items) as $item)
             <li>{!! $item !!}</li>
             @endforeach
         </ul>
+        @endif
         <p><a href="https://sc.npru.ac.th/sc_major/./assets/attachs/major/1706694468_47edd5cc1ed73615518c.pdf" class="btn" style="background-color: #3498db;">ดาวน์โหลดรายละเอียดหลักสูตร</a></p>
-        
-        @elseif($content->section == 'careers')
-        </section>
-        
-        <section>
+    </section>
+    
+    @elseif($content->section == 'careers')
+    <section>
         <h2>{{ $content->title }}</h2>
         <div class="card-container">
             <div class="card">
@@ -65,11 +69,10 @@
                 </div>
             </div>
         </div>
-        
-        @elseif($content->section == 'objectives')
-        </section>
-        
-        <section>
+    </section>
+    
+    @elseif($content->section == 'objectives')
+    <section>
         <h2>{{ $content->title }}</h2>
         <div class="card-container">
             <div class="card">
@@ -97,11 +100,10 @@
                 </div>
             </div>
         </div>
-        
-        @elseif($content->section == 'outcomes')
-        </section>
-        
-        <section>
+    </section>
+    
+    @elseif($content->section == 'outcomes')
+    <section>
         <h2>{{ $content->title }}</h2>
         <p>หลังจากจบการศึกษาจากหลักสูตรของเรา นักศึกษาจะสามารถ:</p>
         <ul style="list-style-type: disc; padding-left: 20px; margin: 20px 0;">
@@ -114,11 +116,10 @@
             <li>นำเทคนิคการจัดการโครงการมาประยุกต์ใช้กับโครงการพัฒนาซอฟต์แวร์</li>
             <li>ดำเนินการทดสอบซอฟต์แวร์และการประกันคุณภาพ</li>
         </ul>
-        
-        @elseif($content->section == 'history')
-        </section>
-        
-        <section>
+    </section>
+    
+    @elseif($content->section == 'history')
+    <section>
         <h2>{{ $content->title }}</h2>
         <p>{{ $content->content }}</p>
         <ul style="list-style-type: disc; padding-left: 20px; margin: 20px 0;">
@@ -127,7 +128,7 @@
             <li>ตีพิมพ์บทความวิจัยกว่า 100 บทความในวารสารและงานประชุมระดับนานาชาติ</li>
             <li>ได้รับรางวัลมากมายสำหรับความเป็นเลิศในการสอนและการวิจัย</li>
         </ul>
-        @endif
-    @endforeach
-</section>
+    </section>
+    @endif
+@endforeach
 @endsection
