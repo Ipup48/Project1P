@@ -1,31 +1,31 @@
 @extends('se.layout')
 
-@section('title', '{{ $item['title'] }} - วิศวกรรมซอฟต์แวร์ NPRU')
+@section('title', '{{ $item->title }} - วิศวกรรมซอฟต์แวร์ NPRU')
 
 @section('content')
 <div class="page-header">
-    <h1>{{ $item['title'] }}</h1>
+    <h1>{{ $item->title }}</h1>
     <p>
-        @if($item['type'] === 'news')
+        @if($item->type === 'news')
             <span class="badge news-badge">ข่าวสาร</span>
         @else
             <span class="badge event-badge">กิจกรรม</span>
         @endif
         <span class="date" style="margin-left: 15px;">
-            <i class="far fa-calendar-alt"></i> {{ \Carbon\Carbon::parse($item['date'])->format('d F Y') }}
+            <i class="far fa-calendar-alt"></i> {{ $item->date->format('d F Y') }}
         </span>
     </p>
 </div>
 
 <section>
     <div style="text-align: center; margin-bottom: 30px;">
-        <img src="{{ $item['image'] }}" alt="{{ $item['title'] }}" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px;" onerror="this.src='https://via.placeholder.com/300x300?text=No+Image+Available'">
+        <img src="{{ $item->image }}" alt="{{ $item->title }}" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px;" onerror="this.src='https://via.placeholder.com/300x300?text=No+Image+Available'">
     </div>
     
     <div style="font-size: 1.1rem; line-height: 1.7;">
-        <p>{{ $item['description'] }}</p>
+        <p>{{ $item->description }}</p>
         
-        @if($item['type'] === 'news')
+        @if($item->type === 'news')
             <p>ข่าวนี้ได้รับการอนุมัติจากคณะกรรมการประชาสัมพันธ์ของภาควิชาวิศวกรรมซอฟต์แวร์ มหาวิทยาลัยราชภัฏนครปฐม และเผยแพร่เพื่อให้ผู้ใช้สามารถเข้าถึงรายละเอียดได้ตามนโยบายของภาควิชา</p>
         @else
             <h3>รายละเอียดกิจกรรม</h3>

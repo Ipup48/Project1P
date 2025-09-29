@@ -12,9 +12,9 @@
     <div class="card-container">
         @foreach($newsAndEvents as $item)
         <div class="card">
-            <img src="{{ $item['image'] }}" alt="{{ $item['title'] }}" style="width: 100%; height: 300px; object-fit: cover;" onerror="this.src='https://via.placeholder.com/300x300?text=No+Image+Available'">
+            <img src="{{ $item->image }}" alt="{{ $item->title }}" style="width: 100%; height: 300px; object-fit: cover;" onerror="this.src='https://via.placeholder.com/300x300?text=No+Image+Available'">
             <div class="card-content">
-                @if($item['type'] === 'news')
+                @if($item->type === 'news')
                     <span class="badge news-badge">
                         ข่าวสาร
                     </span>
@@ -23,12 +23,12 @@
                         กิจกรรม
                     </span>
                 @endif
-                <h3>{{ $item['title'] }}</h3>
+                <h3>{{ $item->title }}</h3>
                 <p class="date">
-                    <i class="far fa-calendar-alt"></i> {{ \Carbon\Carbon::parse($item['date'])->format('d F Y') }}
+                    <i class="far fa-calendar-alt"></i> {{ $item->date->format('d F Y') }}
                 </p>
-                <p>{{ $item['description'] }}</p>
-                <a href="{{ route('se.news.show', $item['id']) }}" class="btn" style="margin-top: 15px;">อ่านเพิ่มเติม</a>
+                <p>{{ $item->description }}</p>
+                <a href="{{ route('se.news.show', $item->id) }}" class="btn" style="margin-top: 15px;">อ่านเพิ่มเติม</a>
             </div>
         </div>
         @endforeach

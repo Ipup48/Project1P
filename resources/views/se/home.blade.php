@@ -116,19 +116,19 @@
     <h2>ห้องปฏิบัติการ</h2>
     <div class="card-container">
         <div class="card">
-            <img src="{{ asset('images/banner/1706695830_4cfc50904539177efe52.jpg') }}" alt="อาคารปฏิบัติการคอมพิวเตอร์ มหาวิทยาลัยราชภัฏนครปฐม" style="width: 100%; height: 200px; object-fit: cover;" onerror="this.src='https://via.placeholder.com/300x200?text=No+Image+Available'">
+            <img src="{{ asset('images/banner/1706695830_4cfc50904539177efe52.jpg') }}" alt="อาคารปฏิบัติการคอมพิวเตอร์ มหาวิทยาลัยราชภัฏนครปฐม" style="width: 100%; height: 300px; object-fit: cover;" onerror="this.src='https://via.placeholder.com/300x300?text=No+Image+Available'">
             <div class="card-content">
                 <h3>อาคารปฏิบัติการคอมพิวเตอร์ มหาวิทยาลัยราชภัฏนครปฐม</h3>
             </div>
         </div>
         <div class="card">
-            <img src="{{ asset('images/banner/1706696144_9c9da38b4de6b2f98859.jpg') }}" alt="ห้องปฏิบัติการคอมพิวเตอร์ C408" style="width: 100%; height: 200px; object-fit: cover;" onerror="this.src='https://via.placeholder.com/300x200?text=No+Image+Available'">
+            <img src="{{ asset('images/banner/1706696144_9c9da38b4de6b2f98859.jpg') }}" alt="ห้องปฏิบัติการคอมพิวเตอร์ C408" style="width: 100%; height: 300px; object-fit: cover;" onerror="this.src='https://via.placeholder.com/300x300?text=No+Image+Available'">
             <div class="card-content">
                 <h3>ห้องปฏิบัติการคอมพิวเตอร์ C408</h3>
             </div>
         </div>
         <div class="card">
-            <img src="{{ asset('images/banner/1706696156_5feb9ba120f4489dd75b.jpg') }}" alt="ห้องปฏิบัติการคอมพิวเตอร์ C409" style="width: 100%; height: 200px; object-fit: cover;" onerror="this.src='https://via.placeholder.com/300x200?text=No+Image+Available'">
+            <img src="{{ asset('images/banner/1716485181_0bfa33ce1d136a430a0a.png') }}" alt="ห้องปฏิบัติการคอมพิวเตอร์ C409" style="width: 100%; height: 300px; object-fit: cover;" onerror="this.src='https://via.placeholder.com/300x300?text=No+Image+Available'">
             <div class="card-content">
                 <h3>ห้องปฏิบัติการคอมพิวเตอร์ C409</h3>
             </div>
@@ -140,25 +140,25 @@
     <h2>กิจกรรมเด่น</h2>
     <div class="card-container">
         <div class="card">
-            <img src="{{ asset('images/banner/1717372516_c7f4c286dd3fea87e017.jpg') }}" alt="พักผ่อนหย่อนใจ" style="width: 100%; height: 200px; object-fit: cover;" onerror="this.src='https://via.placeholder.com/300x200?text=No+Image+Available'">
+            <img src="{{ asset('images/banner/1717372516_c7f4c286dd3fea87e017.jpg') }}" alt="พักผ่อนหย่อนใจ" style="width: 100%; height: 300px; object-fit: cover;" onerror="this.src='https://via.placeholder.com/300x300?text=No+Image+Available'">
             <div class="card-content">
                 <h3>พักผ่อนหย่อนใจ</h3>
             </div>
         </div>
         <div class="card">
-            <img src="{{ asset('images/banner/1717372783_1bebfdb263427d406bf4.jpg') }}" alt="ทานไอติมคลายร้อน" style="width: 100%; height: 200px; object-fit: cover;" onerror="this.src='https://via.placeholder.com/300x200?text=No+Image+Available'">
+            <img src="{{ asset('images/banner/1717372516_c7f4c286dd3fea87e017.jpg') }}" alt="ทานไอติมคลายร้อน" style="width: 100%; height: 300px; object-fit: cover;" onerror="this.src='https://via.placeholder.com/300x300?text=No+Image+Available'">
             <div class="card-content">
                 <h3>ทานไอติมคลายร้อน</h3>
             </div>
         </div>
         <div class="card">
-            <img src="{{ asset('images/banner/1718085446_fe7aac7f8c0b2b2a7dcb.jpg') }}" alt="ตรวจประกันคุณภาพการศึกษาภายใน ระดับหลักสูตร 2566" style="width: 100%; height: 200px; object-fit: cover;" onerror="this.src='https://via.placeholder.com/300x200?text=No+Image+Available'">
+            <img src="{{ asset('images/banner/1706695485_b727e1eb5ce5b9663f9d.jpg') }}" alt="ตรวจประกันคุณภาพการศึกษาภายใน ระดับหลักสูตร 2566" style="width: 100%; height: 300px; object-fit: cover;" onerror="this.src='https://via.placeholder.com/300x300?text=No+Image+Available'">
             <div class="card-content">
                 <h3>ตรวจประกันคุณภาพการศึกษาภายใน ระดับหลักสูตร 2566</h3>
             </div>
         </div>
         <div class="card">
-            <img src="{{ asset('images/banner/1717372489_ea53a9539c25073182bc.jpg') }}" alt="เตรียมความพร้อม 2567" style="width: 100%; height: 200px; object-fit: cover;" onerror="this.src='https://via.placeholder.com/300x200?text=No+Image+Available'">
+            <img src="{{ asset('images/banner/1706669700_7778ac4e41f62ef3b31c.jpg') }}" alt="เตรียมความพร้อม 2567" style="width: 100%; height: 300px; object-fit: cover;" onerror="this.src='https://via.placeholder.com/300x300?text=No+Image+Available'">
             <div class="card-content">
                 <h3>เตรียมความพร้อม 2567</h3>
             </div>
