@@ -3,15 +3,18 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SEController;
 use App\Http\Controllers\NewsController;
+use App\Models\HomeContent;
 
 // Make the Software Engineering home page the default route
 Route::get('/', function () {
-    return view('se.home');
+    $homeContent = \App\Models\HomeContent::orderBy('sort_order')->get();
+    return view('se.home', compact('homeContent'));
 });
 
 // Software Engineering Website Routes
 Route::get('/se', function () {
-    return view('se.home');
+    $homeContent = \App\Models\HomeContent::orderBy('sort_order')->get();
+    return view('se.home', compact('homeContent'));
 })->name('se.home');
 Route::get('/se/about', [SEController::class, 'about'])->name('se.about');
 Route::get('/se/courses', [SEController::class, 'courses'])->name('se.courses');

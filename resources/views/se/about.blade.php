@@ -8,113 +8,126 @@
     <p>เรียนรู้เพิ่มเติมเกี่ยวกับภาควิชาวิศวกรรมซอฟต์แวร์ NPRU</p>
 </div>
 
-<section>
-    <h2>ภาพรวมภาควิชา</h2>
-    <p>ภาควิชาวิศวกรรมซอฟต์แวร์ มหาวิทยาลัยราชภัฏนครปฐม ก่อตั้งขึ้นเพื่อตอบสนองความต้องการของวิศวกรซอฟต์แวร์ที่มีคุณภาพในประเทศไทยและทั่วโลก หลักสูตรของเราเน้นทั้งพื้นฐานทางทฤษฎีและการประยุกต์ใช้หลักการด้านวิศวกรรมซอฟต์แวร์</p>
-    
-    <div style="text-align: center; margin: 30px 0;">
-        <img src="{{ asset('images/se-npru-logo.jpg') }}" alt="ภาควิชาวิศวกรรมซอฟต์แวร์" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px;" onerror="this.src='https://via.placeholder.com/300x300?text=No+Image+Available'">
-    </div>
-    
-    <h3>พันธกิจ</h3>
-    <p>เพื่อผลิตวิศวกรซอฟต์แวร์ที่มีความสามารถซึ่งสามารถมีส่วนร่วมในการพัฒนาซอฟต์แวร์ที่เชื่อถือได้ มีประสิทธิภาพ และเป็นนวัตกรรมที่ตอบสนองความต้องการของสังคม</p>
-    
-    <h3>วิสัยทัศน์</h3>
-    <p>เป็นภาควิชาชั้นนำในการศึกษาและการวิจัยด้านวิศวกรรมซอฟต์แวร์ ที่ได้รับการยอมรับว่าเป็นผู้ผลิตบัณฑิตที่มีความเป็นเลิศในอาชีพและมีส่วนร่วมในการพัฒนานวัตกรรมทางเทคโนโลยี</p>
-</section>
-
-<section>
-    <h2>ข้อมูลทั่วไป</h2>
-    <ul style="list-style-type: disc; padding-left: 20px; margin: 20px 0;">
-        <li><strong>ชื่อปริญญาไทย:</strong> วิทยาศาสตรบัณฑิต (วิศวกรรมซอฟต์แวร์)</li>
-        <li><strong>ชื่อปริญญาอังกฤษ:</strong> Bachelor of Science (Software Engineering) (B.Sc.)</li>
-        <li><strong>รูปแบบหลักสูตร:</strong> ระดับปริญญาตรี หลักสูตร 4 ปี</li>
-        <li><strong>หน่วยกิต:</strong> ไม่น้อยกว่า 128 หน่วยกิต</li>
-        <li><strong>ภาษาที่ใช้:</strong> ไทย/Thai/泰语 (Tàiyǔ)</li>
-        <li><strong>ค่าเรียน:</strong> 11,400 บาท/เทอม</li>
-    </ul>
-    <p><a href="https://sc.npru.ac.th/sc_major/./assets/attachs/major/1706694468_47edd5cc1ed73615518c.pdf" class="btn" style="background-color: #3498db;">ดาวน์โหลดรายละเอียดหลักสูตร</a></p>
-</section>
-
-<section>
-    <h2>อาชีพหลังสำเร็จการศึกษา</h2>
-    <div class="card-container">
-        <div class="card">
-            <div class="card-content">
-                <h3>เจ้าหน้าที่ตรวจสอบคุณภาพซอฟต์แวร์</h3>
+@foreach($aboutContent as $content)
+    @if($content->section == 'overview')
+    <section>
+        <h2>{{ $content->title }}</h2>
+        <p>{{ $content->content }}</p>
+        
+        <div style="text-align: center; margin: 30px 0;">
+            <img src="{{ asset($content->image) }}" alt="ภาควิชาวิศวกรรมซอฟต์แวร์" style="width: 100%; height: 300px; object-fit: cover; border-radius: 8px;" onerror="this.src='https://via.placeholder.com/300x300?text=No+Image+Available'">
+        </div>
+        
+        @elseif($content->section == 'mission')
+        <h3>{{ $content->title }}</h3>
+        <p>{{ $content->content }}</p>
+        
+        @elseif($content->section == 'vision')
+        <h3>{{ $content->title }}</h3>
+        <p>{{ $content->content }}</p>
+        
+        @elseif($content->section == 'general_info')
+        </section>
+        
+        <section>
+        <h2>{{ $content->title }}</h2>
+        <ul style="list-style-type: disc; padding-left: 20px; margin: 20px 0;">
+            @foreach(json_decode($content->list_items) as $item)
+            <li>{!! $item !!}</li>
+            @endforeach
+        </ul>
+        <p><a href="https://sc.npru.ac.th/sc_major/./assets/attachs/major/1706694468_47edd5cc1ed73615518c.pdf" class="btn" style="background-color: #3498db;">ดาวน์โหลดรายละเอียดหลักสูตร</a></p>
+        
+        @elseif($content->section == 'careers')
+        </section>
+        
+        <section>
+        <h2>{{ $content->title }}</h2>
+        <div class="card-container">
+            <div class="card">
+                <div class="card-content">
+                    <h3>เจ้าหน้าที่ตรวจสอบคุณภาพซอฟต์แวร์</h3>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>โปรแกรมเมอร์</h3>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>วิศวกรซอฟต์แวร์</h3>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>นักทดสอบระบบ</h3>
+                </div>
             </div>
         </div>
-        <div class="card">
-            <div class="card-content">
-                <h3>โปรแกรมเมอร์</h3>
+        
+        @elseif($content->section == 'objectives')
+        </section>
+        
+        <section>
+        <h2>{{ $content->title }}</h2>
+        <div class="card-container">
+            <div class="card">
+                <div class="card-content">
+                    <h3>ความเชี่ยวชาญทางเทคนิค</h3>
+                    <p>บัณฑิตจะมีทักษะทางเทคนิคที่แข็งแกร่งในการพัฒนาซอฟต์แวร์ การออกแบบระบบ และการแก้ไขปัญหา</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>ทักษะเฉพาะทาง</h3>
+                    <p>บัณฑิตจะแสดงให้เห็นถึงการสื่อสารที่มีประสิทธิภาพ ความสามารถในการทำงานเป็นทีม และทักษะการจัดการโครงการ</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>การเรียนรู้อย่างต่อเนื่อง</h3>
+                    <p>บัณฑิตจะมีส่วนร่วมในการเรียนรู้ตลอดชีวิตเพื่อปรับตัวให้เข้ากับเทคโนโลยีที่เปลี่ยนแปลงไปและแนวทางปฏิบัติในอุตสาหกรรม</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>ความรับผิดชอบทางจริยธรรม</h3>
+                    <p>บัณฑิตจะเข้าใจและปฏิบักติตามความรับผิดชอบทางวิชาชีพและจริยธรรมในการพัฒนาซอฟต์แวร์</p>
+                </div>
             </div>
         </div>
-        <div class="card">
-            <div class="card-content">
-                <h3>วิศวกรซอฟต์แวร์</h3>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-content">
-                <h3>นักทดสอบระบบ</h3>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section>
-    <h2>วัตถุประสงค์การศึกษา</h2>
-    <div class="card-container">
-        <div class="card">
-            <div class="card-content">
-                <h3>ความเชี่ยวชาญทางเทคนิค</h3>
-                <p>บัณฑิตจะมีทักษะทางเทคนิคที่แข็งแกร่งในการพัฒนาซอฟต์แวร์ การออกแบบระบบ และการแก้ไขปัญหา</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-content">
-                <h3>ทักษะเฉพาะทาง</h3>
-                <p>บัณฑิตจะแสดงให้เห็นถึงการสื่อสารที่มีประสิทธิภาพ ความสามารถในการทำงานเป็นทีม และทักษะการจัดการโครงการ</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-content">
-                <h3>การเรียนรู้อย่างต่อเนื่อง</h3>
-                <p>บัณฑิตจะมีส่วนร่วมในการเรียนรู้ตลอดชีวิตเพื่อปรับตัวให้เข้ากับเทคโนโลยีที่เปลี่ยนแปลงไปและแนวทางปฏิบัติในอุตสาหกรรม</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-content">
-                <h3>ความรับผิดชอบทางจริยธรรม</h3>
-                <p>บัณฑิตจะเข้าใจและปฏิบักติตามความรับผิดชอบทางวิชาชีพและจริยธรรมในการพัฒนาซอฟต์แวร์</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section>
-    <h2>ผลลัพธ์การศึกษาของนักศึกษา</h2>
-    <p>หลังจากจบการศึกษาจากหลักสูตรของเรา นักศึกษาจะสามารถ:</p>
-    <ul style="list-style-type: disc; padding-left: 20px; margin: 20px 0;">
-        <li>นำความรู้ทางคณิตศาสตร์ วิทยาศาสตร์ และวิศวกรรมมาประยุกต์ใช้กับปัญหาด้านวิศวกรรมซอฟต์แวร์</li>
-        <li>ออกแบบและพัฒนาระบบซอฟต์แวร์ที่ตรงตามข้อกำหนด</li>
-        <li>ใช้เครื่องมือและเทคนิคด้านวิศวกรรมซอฟต์แวร์ทันสมัยอย่างมีประสิทธิภาพ</li>
-        <li>ทำงานเป็นทีมและสื่อสารแนวคิดทางเทคนิคอย่างชัดเจน</li>
-        <li>เข้าใจและรับผิดชอบทางจริยธรรมในงานพัฒนาซอฟต์แวร์</li>
-        <li>มีส่วนร่วมในการเรียนรู้และการพัฒนาทางวิชาชีพอย่างต่อเนื่อง</li>
-        <li>นำเทคนิคการจัดการโครงการมาประยุกต์ใช้กับโครงการพัฒนาซอฟต์แวร์</li>
-        <li>ดำเนินการทดสอบซอฟต์แวร์และการประกันคุณภาพ</li>
-    </ul>
-</section>
-
-<section>
-    <h2>ประวัติภาควิชา</h2>
-    <p>ก่อตั้งในปี พ.ศ. 2548 ภาควิชาวิศวกรรมซอฟต์แวร์ได้เติบโตจากโปรแกรมเล็กๆ ที่มีนักศึกษา 30 คน เป็นหนึ่งในภาควิชาด้านวิศวกรรมซอฟต์แวร์ที่ได้รับความเคารพนับถือในภูมิภาค ตลอดหลายปีที่ผ่านมา เราได้:</p>
-    <ul style="list-style-type: disc; padding-left: 20px; margin: 20px 0;">
-        <li>ผลิตบัณฑิตกว่า 500 คนที่กำลังทำงานในบริษัทเทคโนโลยีชั้นนำ</li>
-        <li>สร้างความร่วมมือกับบริษัทเทคโนโลยีกว่า 20 แห่งสำหรับการฝึกงานและการจ้างงาน</li>
-        <li>ตีพิมพ์บทความวิจัยกว่า 100 บทความในวารสารและงานประชุมระดับนานาชาติ</li>
-        <li>ได้รับรางวัลมากมายสำหรับความเป็นเลิศในการสอนและการวิจัย</li>
-    </ul>
+        
+        @elseif($content->section == 'outcomes')
+        </section>
+        
+        <section>
+        <h2>{{ $content->title }}</h2>
+        <p>หลังจากจบการศึกษาจากหลักสูตรของเรา นักศึกษาจะสามารถ:</p>
+        <ul style="list-style-type: disc; padding-left: 20px; margin: 20px 0;">
+            <li>นำความรู้ทางคณิตศาสตร์ วิทยาศาสตร์ และวิศวกรรมมาประยุกต์ใช้กับปัญหาด้านวิศวกรรมซอฟต์แวร์</li>
+            <li>ออกแบบและพัฒนาระบบซอฟต์แวร์ที่ตรงตามข้อกำหนด</li>
+            <li>ใช้เครื่องมือและเทคนิคด้านวิศวกรรมซอฟต์แวร์ทันสมัยอย่างมีประสิทธิภาพ</li>
+            <li>ทำงานเป็นทีมและสื่อสารแนวคิดทางเทคนิคอย่างชัดเจน</li>
+            <li>เข้าใจและรับผิดชอบทางจริยธรรมในงานพัฒนาซอฟต์แวร์</li>
+            <li>มีส่วนร่วมในการเรียนรู้และการพัฒนาทางวิชาชีพอย่างต่อเนื่อง</li>
+            <li>นำเทคนิคการจัดการโครงการมาประยุกต์ใช้กับโครงการพัฒนาซอฟต์แวร์</li>
+            <li>ดำเนินการทดสอบซอฟต์แวร์และการประกันคุณภาพ</li>
+        </ul>
+        
+        @elseif($content->section == 'history')
+        </section>
+        
+        <section>
+        <h2>{{ $content->title }}</h2>
+        <p>{{ $content->content }}</p>
+        <ul style="list-style-type: disc; padding-left: 20px; margin: 20px 0;">
+            <li>ผลิตบัณฑิตกว่า 500 คนที่กำลังทำงานในบริษัทเทคโนโลยีชั้นนำ</li>
+            <li>สร้างความร่วมมือกับบริษัทเทคโนโลยีกว่า 20 แห่งสำหรับการฝึกงานและการจ้างงาน</li>
+            <li>ตีพิมพ์บทความวิจัยกว่า 100 บทความในวารสารและงานประชุมระดับนานาชาติ</li>
+            <li>ได้รับรางวัลมากมายสำหรับความเป็นเลิศในการสอนและการวิจัย</li>
+        </ul>
+        @endif
+    @endforeach
 </section>
 @endsection

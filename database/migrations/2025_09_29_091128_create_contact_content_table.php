@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('fax')->nullable();
             $table->text('office_hours')->nullable();
             $table->string('map_url', 1000)->nullable(); // Increased length for long URLs
-            $table->string('social_media')->nullable(); // JSON encoded social media links
+            $table->string('social_media', 1000)->nullable(); // JSON encoded social media links
             $table->integer('sort_order')->default(0);
             $table->timestamps();
         });
