@@ -16,9 +16,10 @@ class CoursesContentSeeder extends Seeder
         $coursesContent = [
             [
                 'title' => 'ข้อมูลทั่วไป',
-                'content' => null,
+                'content' => 'หลักสูตรวิศวกรรมศาสตรบัณฑิต สาขาวิศวกรรมซอฟต์แวร์ เป็นหลักสูตรที่ออกแบบมาเพื่อเตรียมความพร้อมให้นักศึกษามีความรู้ ความสามารถ และทักษะที่จำเป็นสำหรับการทำงานในอุตสาหกรรมซอฟต์แวร์',
                 'section' => 'general_info',
-                'subtitle' => null,
+                'subtitle' => 'หลักสูตรที่ทันสมัยและสอดคล้องกับความต้องการของตลาดแรงงาน',
+                'image' => 'images/courses/general_info.jpg',
                 'list_items' => json_encode([
                     'ชื่อปริญญาไทย: วิทยาศาสตรบัณฑิต (วิศวกรรมซอฟต์แวร์)',
                     'ชื่อปริญญาอังกฤษ: Bachelor of Science (Software Engineering) (B.Sc.)',
@@ -36,6 +37,7 @@ class CoursesContentSeeder extends Seeder
                 'content' => 'หลักสูตรวิศวกรรมศาสตรบัณฑิต สาขาวิศวกรรมซอฟต์แวร์ เป็นหลักสูตร 4 ปี ประกอบด้วย 128 หน่วยกิต หลักสูตรออกแบบมาเพื่อให้นักศึกษามีพื้นฐานที่มั่นคงในวิทยาการคอมพิวเตอร์และความรู้เฉพาะทางด้านวิศวกรรมซอฟต์แวร์',
                 'section' => 'structure',
                 'subtitle' => 'ข้อกำหนดของปริญญา',
+                'image' => 'images/courses/structure.jpg',
                 'list_items' => json_encode([
                     'หน่วยกิตรวม: 128 หน่วยกิต',
                     'รายวิชาศึกษาทั่วไป: 30 หน่วยกิต',
@@ -48,18 +50,27 @@ class CoursesContentSeeder extends Seeder
             ],
             [
                 'title' => 'อาชีพหลังสำเร็จการศึกษา',
-                'content' => null,
+                'content' => 'บัณฑิตที่สำเร็จการศึกษาจากหลักสูตรวิศวกรรมซอฟต์แวร์จะมีโอกาสประกอบอาชีพหลากหลายในอุตสาหกรรมเทคโนโลยีสารสนเทศ',
                 'section' => 'careers',
-                'subtitle' => null,
-                'list_items' => null,
+                'subtitle' => 'โอกาสในการประกอบอาชีพที่หลากหลาย',
+                'image' => 'images/courses/careers.jpg',
+                'list_items' => json_encode([
+                    'วิศวกรซอฟต์แวร์',
+                    'นักวิเคราะห์ระบบ',
+                    'นักพัฒนาแอปพลิเคชัน',
+                    'ผู้จัดการโครงการซอฟต์แวร์',
+                    'ที่ปรึกษาด้านเทคโนโลยีสารสนเทศ',
+                    'ผู้ประกอบการด้านเทคโนโลยี'
+                ]),
                 'year' => null,
                 'sort_order' => 3
             ],
             [
                 'title' => 'รายวิชาแกน',
-                'content' => null,
+                'content' => 'รายวิชาแกนที่นักศึกษาต้องศึกษาในปีที่ 1 เพื่อสร้างพื้นฐานทางวิทยาการคอมพิวเตอร์และความรู้เฉพาะทางด้านวิศวกรรมซอฟต์แวร์',
                 'section' => 'core_subjects',
                 'subtitle' => 'ปีที่ 1',
+                'image' => 'images/courses/year1.jpg',
                 'list_items' => json_encode([
                     'การเขียนโปรแกรมเบื้องต้น',
                     'ระบบคอมพิวเตอร์พื้นฐาน',
@@ -71,9 +82,10 @@ class CoursesContentSeeder extends Seeder
             ],
             [
                 'title' => 'รายวิชาแกน',
-                'content' => null,
+                'content' => 'รายวิชาแกนที่นักศึกษาต้องศึกษาในปีที่ 2 เพื่อพัฒนาทักษะทางด้านโครงสร้างข้อมูล อัลกอริธึม และพื้นฐานวิศวกรรมซอฟต์แวร์',
                 'section' => 'core_subjects',
                 'subtitle' => 'ปีที่ 2',
+                'image' => 'images/courses/year2.jpg',
                 'list_items' => json_encode([
                     'โครงสร้างข้อมูลและอัลกอริธึม',
                     'การเขียนโปรแกรมเชิงวัตถุ',
@@ -85,9 +97,10 @@ class CoursesContentSeeder extends Seeder
             ],
             [
                 'title' => 'รายวิชาแกน',
-                'content' => null,
+                'content' => 'รายวิชาแกนที่นักศึกษาต้องศึกษาในปีที่ 3 เพื่อพัฒนาทักษะทางด้านการออกแบบและสถาปัตยกรรมซอฟต์แวร์ การพัฒนาแอปพลิเคชัน และการทดสอบซอฟต์แวร์',
                 'section' => 'core_subjects',
                 'subtitle' => 'ปีที่ 3',
+                'image' => 'images/courses/year3.jpg',
                 'list_items' => json_encode([
                     'การออกแบบและสถาปัตยกรรมซอฟต์แวร์',
                     'การพัฒนาแอปพลิเคชันเว็บ',
@@ -99,9 +112,10 @@ class CoursesContentSeeder extends Seeder
             ],
             [
                 'title' => 'รายวิชาแกน',
-                'content' => null,
+                'content' => 'รายวิชาแกนที่นักศึกษาต้องศึกษาในปีที่ 4 เพื่อพัฒนาทักษะทางด้านวิศวกรรมความต้องการ การพัฒนาแอปพลิเคชันมือถือ และความปลอดภัยของซอฟต์แวร์',
                 'section' => 'core_subjects',
                 'subtitle' => 'ปีที่ 4',
+                'image' => 'images/courses/year4.jpg',
                 'list_items' => json_encode([
                     'วิศวกรรมความต้องการซอฟต์แวร์',
                     'การพัฒนาแอปพลิเคชันมือถือ',
@@ -113,9 +127,10 @@ class CoursesContentSeeder extends Seeder
             ],
             [
                 'title' => 'ทางเลือกเฉพาะทาง',
-                'content' => 'ในปีสุดท้าย นักศึกษาสามารถเลือกทางเลือกเฉพาะทางเพื่อเน้นการศึกษา:',
+                'content' => 'ในปีสุดท้าย นักศึกษาสามารถเลือกทางเลือกเฉพาะทางเพื่อเน้นการศึกษาในด้านที่สนใจ:',
                 'section' => 'specializations',
                 'subtitle' => 'ปัญญาประดิษฐ์',
+                'image' => 'images/courses/ai.jpg',
                 'list_items' => json_encode([
                     'เน้นด้าน Machine Learning, Neural Networks และการพัฒนาระบบอัจฉริยะ'
                 ]),
@@ -124,9 +139,10 @@ class CoursesContentSeeder extends Seeder
             ],
             [
                 'title' => 'ทางเลือกเฉพาะทาง',
-                'content' => null,
+                'content' => 'ทางเลือกเฉพาะทางที่เน้นการพัฒนาเว็บและแอปพลิเคชันมือถือ:',
                 'section' => 'specializations',
                 'subtitle' => 'การพัฒนาเว็บและมือถือ',
+                'image' => 'images/courses/web_mobile.jpg',
                 'list_items' => json_encode([
                     'เชี่ยวชาญในการพัฒนาเว็บแบบ Full-stack และแอปพลิเคชันมือถือข้ามแพลตฟอร์ม'
                 ]),
@@ -135,9 +151,10 @@ class CoursesContentSeeder extends Seeder
             ],
             [
                 'title' => 'ทางเลือกเฉพาะทาง',
-                'content' => null,
+                'content' => 'ทางเลือกเฉพาะทางที่เน้นด้านความปลอดภัยไซเบอร์:',
                 'section' => 'specializations',
                 'subtitle' => 'ความปลอดภัยไซเบอร์',
+                'image' => 'images/courses/cybersecurity.jpg',
                 'list_items' => json_encode([
                     'เน้นด้านการพัฒนาซอฟต์แวร์ที่ปลอดภัยและหลักการความปลอดภัยของข้อมูล'
                 ]),
@@ -146,9 +163,10 @@ class CoursesContentSeeder extends Seeder
             ],
             [
                 'title' => 'รายวิชาเลือก',
-                'content' => 'นักศึกษาสามารถเลือกรายวิชาเลือกได้หลากหลายเพื่อปรับแต่งการศึกษา:',
+                'content' => 'นักศึกษาสามารถเลือกรายวิชาเลือกได้หลากหลายเพื่อปรับแต่งการศึกษาตามความสนใจ:',
                 'section' => 'electives',
-                'subtitle' => null,
+                'subtitle' => 'รายวิชาที่นักศึกษาสามารถเลือกเรียนได้',
+                'image' => 'images/courses/electives.jpg',
                 'list_items' => json_encode([
                     'การพัฒนาเกม',
                     'การประมวลผลบนคลาวด์',

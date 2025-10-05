@@ -11,7 +11,16 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        //
+        $middleware->alias([
+            'admin' => \App\Http\Middleware\AdminMiddleware::class,
+            'throttle' => \App\Http\Middleware\ThrottleRequests::class,
+        ]);
+        
+        // Add API exception handler middleware
+        $middleware->append(\App\Http\Middleware\ApiExceptionHandler::class);
+        
+        // Add maintenance mode check middleware
+        $middleware->append(\App\Http\Middleware\CheckForMaintenanceMode::class);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //

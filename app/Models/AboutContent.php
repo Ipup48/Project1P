@@ -13,6 +13,11 @@ class AboutContent extends Model
         'content',
         'section',
         'image',
+        'list_items',
         'sort_order'
+    ];
+
+    protected $casts = [
+        'list_items' => 'array'
     ];
 }

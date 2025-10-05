@@ -16,10 +16,10 @@ class HomeContentSeeder extends Seeder
         $homeContent = [
             [
                 'title' => 'สาขาวิชาวิศวกรรมซอฟต์แวร์',
-                'content' => null,
+                'content' => 'ยินดีต้อนรับสู่สาขาวิชาวิศวกรรมซอฟต์แวร์ มหาวิทยาลัยราชภัฏนครปฐม ที่มีชื่อเสียงในด้านการผลิตบัณฑิตที่มีคุณภาพและมีทักษะเฉพาะทางด้านเทคโนโลยีสารสนเทศ',
                 'section' => 'banner',
-                'image' => 'images/banner/1693382011_2c0ee9d91d20a0202d5f.jpg',
-                'subtitle' => null,
+                'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR670W3EnBsPk9cX1doJxxPHibFAqEqhGXeAg&s',
+                'subtitle' => 'Software Engineering Program',
                 'list_items' => null,
                 'link' => null,
                 'link_text' => null,
@@ -27,10 +27,10 @@ class HomeContentSeeder extends Seeder
             ],
             [
                 'title' => 'ข้อมูลทั่วไป',
-                'content' => null,
+                'content' => 'หลักสูตรวิศวกรรมซอฟต์แวร์เป็นหลักสูตรที่ออกแบบมาเพื่อเตรียมความพร้อมให้นักศึกษามีความรู้ ความสามารถ และทักษะที่จำเป็นสำหรับการทำงานในอุตสาหกรรมซอฟต์แวร์',
                 'section' => 'general_info',
-                'image' => null,
-                'subtitle' => null,
+                'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR670W3EnBsPk9cX1doJxxPHibFAqEqhGXeAg&s',
+                'subtitle' => 'หลักสูตรที่ทันสมัยและสอดคล้องกับความต้องการของตลาดแรงงาน',
                 'list_items' => json_encode([
                     'ชื่อปริญญาไทย: วิทยาศาสตรบัณฑิต (วิศวกรรมซอฟต์แวร์)',
                     'ชื่อปริญญาอังกฤษ: Bachelor of Science (Software Engineering) (B.Sc.)',
@@ -46,55 +46,80 @@ class HomeContentSeeder extends Seeder
             ],
             [
                 'title' => 'อาชีพหลังสำเร็จการศึกษา',
-                'content' => null,
+                'content' => 'บัณฑิตที่สำเร็จการศึกษาจากหลักสูตรวิศวกรรมซอฟต์แวร์จะมีโอกาสประกอบอาชีพหลากหลายในอุตสาหกรรมเทคโนโลยีสารสนเทศ',
                 'section' => 'careers',
-                'image' => null,
-                'subtitle' => null,
-                'list_items' => null,
-                'link' => null,
-                'link_text' => null,
+                'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR670W3EnBsPk9cX1doJxxPHibFAqEqhGXeAg&s',
+                'subtitle' => 'โอกาสในการประกอบอาชีพที่หลากหลาย',
+                'list_items' => json_encode([
+                    'วิศวกรซอฟต์แวร์',
+                    'นักวิเคราะห์ระบบ',
+                    'นักพัฒนาแอปพลิเคชัน',
+                    'ผู้จัดการโครงการซอฟต์แวร์',
+                    'ที่ปรึกษาด้านเทคโนโลยีสารสนเทศ',
+                    'ผู้ประกอบการด้านเทคโนโลยี'
+                ]),
+                'link' => '/se/courses',
+                'link_text' => 'ดูรายละเอียดหลักสูตร',
                 'sort_order' => 3
             ],
             [
                 'title' => 'อาจารย์ประจำหลักสูตร',
-                'content' => null,
+                'content' => 'ทีมงานอาจารย์ผู้เชี่ยวชาญที่มีประสบการณ์ในการสอนและการทำงานในอุตสาหกรรมเทคโนโลยีสารสนเทศ',
                 'section' => 'faculty',
-                'image' => null,
-                'subtitle' => null,
-                'list_items' => null,
-                'link' => null,
-                'link_text' => null,
+                'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR670W3EnBsPk9cX1doJxxPHibFAqEqhGXeAg&s',
+                'subtitle' => 'ทีมงานที่มีคุณภาพและประสบการณ์',
+                'list_items' => json_encode([
+                    'ผู้เชี่ยวชาญด้านวิศวกรรมซอฟต์แวร์',
+                    'มีประสบการณ์การทำงานในบริษัทเทคโนโลยีชั้นนำ',
+                    'มีผลงานวิจัยที่ได้รับการยอมรับในระดับนานาชาติ'
+                ]),
+                'link' => '/se/faculty',
+                'link_text' => 'ดูข้อมูลอาจารย์ทั้งหมด',
                 'sort_order' => 4
             ],
             [
                 'title' => 'อาจารย์พิเศษและนักวิจัย',
-                'content' => null,
+                'content' => 'อาจารย์พิเศษและนักวิจัยจากภาคอุตสาหกรรมที่มีประสบการณ์ตรงในด้านวิศวกรรมซอฟต์แวร์',
                 'section' => 'special_faculty',
-                'image' => null,
-                'subtitle' => null,
-                'list_items' => null,
-                'link' => null,
-                'link_text' => null,
+                'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR670W3EnBsPk9cX1doJxxPHibFAqEqhGXeAg&s',
+                'subtitle' => 'ความเชี่ยวชาญจากภาคอุตสาหกรรม',
+                'list_items' => json_encode([
+                    'ผู้เชี่ยวชาญจากบริษัทเทคโนโลยีชั้นนำ',
+                    'นักวิจัยที่มีผลงานในระดับนานาชาติ',
+                    'ผู้ประกอบการด้านเทคโนโลยีสารสนเทศ'
+                ]),
+                'link' => '/se/faculty',
+                'link_text' => 'ดูข้อมูลอาจารย์พิเศษ',
                 'sort_order' => 5
             ],
             [
                 'title' => 'ห้องปฏิบัติการ',
-                'content' => null,
+                'content' => 'ห้องปฏิบัติการที่ทันสมัยและมีอุปกรณ์ครบครันสำหรับการเรียนรู้และพัฒนาทักษะด้านวิศวกรรมซอฟต์แวร์',
                 'section' => 'laboratories',
-                'image' => null,
-                'subtitle' => null,
-                'list_items' => null,
+                'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR670W3EnBsPk9cX1doJxxPHibFAqEqhGXeAg&s',
+                'subtitle' => 'สภาพแวดล้อมการเรียนรู้ที่ดีเยี่ยม',
+                'list_items' => json_encode([
+                    'ห้องปฏิบัติการพัฒนาซอฟต์แวร์',
+                    'ห้องปฏิบัติการระบบเครือข่าย',
+                    'ห้องปฏิบัติการฐานข้อมูล',
+                    'ห้องปฏิบัติการปัญญาประดิษฐ์'
+                ]),
                 'link' => null,
                 'link_text' => null,
                 'sort_order' => 6
             ],
             [
                 'title' => 'กิจกรรมเด่น',
-                'content' => null,
+                'content' => 'กิจกรรมที่จัดขึ้นเพื่อส่งเสริมการเรียนรู้และการพัฒนาทักษะของนักศึกษาในด้านต่างๆ',
                 'section' => 'activities',
-                'image' => null,
-                'subtitle' => null,
-                'list_items' => null,
+                'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR670W3EnBsPk9cX1doJxxPHibFAqEqhGXeAg&s',
+                'subtitle' => 'กิจกรรมที่ส่งเสริมการเรียนรู้',
+                'list_items' => json_encode([
+                    'สัมมนาวิชาการระดับนานาชาติ',
+                    'โครงการฝึกงานในต่างประเทศ',
+                    'การประกวดโครงงานนักศึกษา',
+                    'เวิร์กช็อปพัฒนาทักษะเฉพาะทาง'
+                ]),
                 'link' => null,
                 'link_text' => null,
                 'sort_order' => 7

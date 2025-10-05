@@ -322,6 +322,13 @@
                     <li><a href="{{ route('se.faculty') }}" class="{{ request()->routeIs('se.faculty') ? 'active' : '' }}">อาจารย์ประจำสาขา</a></li>
                     <li><a href="{{ route('se.news') }}" class="{{ request()->routeIs('se.news') || request()->routeIs('se.news.show') ? 'active' : '' }}">ข่าวสารและกิจกรรม</a></li>
                     <li><a href="{{ route('se.contact') }}" class="{{ request()->routeIs('se.contact') ? 'active' : '' }}">ติดต่อ</a></li>
+                    @auth
+                        @if(auth()->user()->is_admin)
+                        <li><a href="{{ route('admin.new-dashboard') }}" class="{{ request()->routeIs('admin.*') ? 'active' : '' }}">Admin Panel</a></li>
+                        @endif
+                    @else
+                    <li><a href="{{ route('admin.login') }}">Admin Login</a></li>
+                    @endauth
                 </ul>
             </nav>
         </div>
@@ -346,6 +353,13 @@
                     <a href="{{ route('se.faculty') }}">อาจารย์ประจำสาขา</a>
                     <a href="{{ route('se.news') }}">ข่าวสารและกิจกรรม</a>
                     <a href="{{ route('se.contact') }}">ติดต่อ</a>
+                    @auth
+                        @if(auth()->user()->is_admin)
+                        <a href="{{ route('admin.new-dashboard') }}">Admin Panel</a>
+                        @endif
+                    @else
+                    <a href="{{ route('admin.login') }}">Admin Login</a>
+                    @endauth
                 </div>
                 <div class="copyright">
                     <p>&copy; {{ date('Y') }} ภาควิชาวิศวกรรมซอฟต์แวร์ มหาวิทยาลัยราชภัฏนครปฐม สงวนลิขสิทธิ์</p>

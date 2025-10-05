@@ -23,14 +23,21 @@ class DatabaseSeeder extends Seeder
             'email_verified_at' => now()
         ]);
 
-        // Seed all content
+        // Create admin user
+        $this->call(AdminUserSeeder::class);
+        
+        // Seed all content with complete data and images
         $this->call([
             NewsEventsSeeder::class,
             FacultySeeder::class,
             AboutContentSeeder::class,
             CoursesContentSeeder::class,
             HomeContentSeeder::class,
-            ContactContentSeeder::class
+            ContactContentSeeder::class,
+            FacultyAchievementsSeeder::class,
+            StudentAchievementsSeeder::class,
+            AlumniSeeder::class,
+            VideosSeeder::class
         ]);
     }
 }

@@ -22,6 +22,7 @@ class ContactContentSeeder extends Seeder
                 'phone' => '034-261-101 ต่อ 1234',
                 'email' => 'se-info@npru.ac.th',
                 'fax' => '034-261-102',
+                'image' => 'images/contact/department.jpg',
                 'office_hours' => json_encode([
                     'จันทร์ - ศุกร์: 08:30 น. - 16:30 น.',
                     'เสาร์: 08:30 น. - 12:00 น.',
